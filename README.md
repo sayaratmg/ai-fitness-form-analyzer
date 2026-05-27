@@ -1,16 +1,16 @@
-# Project Name: FlexiForm-AI (Real-Time AI Yoga & Squat Form Analyzer)
+# AI-Driven Fitness Form Tracker & Rep Counter
 
-## Project Introduction
-FlexiForm-AI is a real-time Computer Vision application designed to act as an automated personal fitness coach. The primary goal of this project is to assist users in maintaining correct posture and execution while performing physical exercises, specifically focusing on Squats and select Yoga poses.
+## About the Project
+With the rise of home workouts and remote fitness, it's easy for people to injure themselves or perform exercises inefficiently without professional guidance. This project focuses on building a real-time, interactive virtual fitness coach that monitors workout posture right from a standard laptop webcam. 
 
-By utilizing a standard webcam feed, the system leverages deep-learning-based human body pose estimation to capture coordinates of key skeletal landmarks. The application continuously applies biomechanical calculations to measure exact angles at critical joints (such as hips, knees, and ankles) to evaluate the user's movement form and automatically count correct repetitions.
+The main goal is to create a lightweight Python application that tracks a user's body landmarks while they do exercises like squats or specific yoga poses. By analyzing the structural relationships between different joints, the app will give immediate, on-screen advice to help the user correct their form and will automatically count valid repetitions.
 
-### Key Features to Implement:
-1. **Real-Time Body Tracking:** Extract 33 distinct anatomical skeletal keypoints using MediaPipe Pose.
-2. **Geometric Joint Angle Calculation:** Implement vector trigonometry algorithms using NumPy to determine knee and hip angles in real-time.
-3. **Dynamic Posture Feedback Engine:** Provide immediate visual alerts and color-coded feedback on the screen when posture drops below safety thresholds.
-4. **State-Based Automated Repetition Counting:** Build a software state-machine logic to track exercise phases (e.g., descending vs. ascending in a squat) to increment counts securely without duplication.
+### What I'm Building:
+1. **Real-Time Landmark Detection:** Using MediaPipe Pose to smoothly track key skeletal joints across every video frame without requiring a heavy external GPU.
+2. **Biomechanics & Geometric Analysis:** Applying vector geometry to measure live movement angles at the hips, knees, and ankles to evaluate posture accuracy.
+3. **Smart Repetition Tracking:** Implementing a robust state-machine logic (tracking "Up" vs. "Down" phases) so the counter only increments when a full, safe range of motion is achieved, completely avoiding double-counting errors.
+4. **Interactive Visual Overlay:** Creating a clean OpenCV-based user interface that displays a dynamic skeleton mesh, live angle metrics, and color-coded real-time warnings when posture is incorrect.
 
-### Tech Stack
-- **Programming Language:** Python
-- **Core Libraries:** OpenCV, MediaPipe, NumPy, Matplotlib
+### Tools & Technologies
+- **Language:** Python
+- **Libraries:** OpenCV, MediaPipe, NumPy, Matplotlib
